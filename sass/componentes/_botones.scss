@@ -1,0 +1,60 @@
+@import '../vars/variables';
+
+@mixin btnHover ($color, $bgColor){
+    border-color: $color;
+    background-color: $bgColor;
+    color: $color;
+}
+.boton {
+    padding: 16px;
+    margin: 8px;
+    border: 1px solid #000;
+    color: var $colorNegro;
+    background-color: var $colorBlanco;
+    cursor: pointer;
+    min-width: 120px;
+
+}
+
+
+
+.buttonsGroup{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+&__btn{
+    @extend .boton;
+    // padding: 16px;
+    // margin: 8px;
+    // border: 1px solid #000;
+    // color: var $colorNegro;
+    // background-color: var $colorBlanco;
+    // cursor: pointer;
+    // min-width: 120px;
+
+    &:hover {
+        @include btnHover($colorBlanco, $colorNegro)
+    // border-color: var(--colorBlanco);
+    // background-color: var(--color-Negro);
+    // color: var(--colorVerde);
+}
+    &--primary {
+        border-color: var $colorVerde;
+        color: var $colorVerde;
+    }
+    &:hover {
+        border-color: var(--colorBlanco);
+        background-color: var(--colorVerde);
+        color: var(--colorBlanco);
+    }
+    &--secundary {
+        border-color: var $colorVerde;
+        color: var $colorVerde;
+        &:hover {
+            @include btnHover ($colorBlanco,$colorNaranja)
+        }
+}
+}}

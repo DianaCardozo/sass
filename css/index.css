@@ -1,0 +1,58 @@
+:root{
+    --color-Negro:#000;
+    --colorBlanco: #fff;
+    --colorVerde: #008000;
+    --colorOrange: #ffa500;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.buttonsGroup{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buttonsGroup__btn{
+    padding: 16px;
+    margin: 8px;
+    border: 1px solid #000;
+    color: var(--color-Negro);
+    background-color: var(--colorBlanco);
+    cursor: pointer;
+    border-radius: 16px;
+    min-width: 120px;
+}
+
+.buttonsGroup__btn:hover{
+    border-color: var(--colorBlanco);
+    background-color: var(--color-Negro);
+    color: var(--colorVerde);
+}
+
+.buttonsGroup__btn--primary{
+    border-color: var(--colorVerde);
+    color: var(--colorVerde);
+}
+
+.buttonsGroup__btn--primary:hover{
+    border-color: var(--colorBlanco);
+    background-color: var(--colorVerde);
+    color: var(--colorBlanco);
+}
+
+.buttonsGroup__btn--secundary{
+    border-color: var(--colorOrange);
+    color: var(--colorOrange);
+}
+
+.buttonsGroup__btn--secundary:hover{
+    border-color: var(--colorBlanco);
+    background-color: var(--colorOrange);
+    color: var(--colorBlanco);
+}
